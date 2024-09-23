@@ -1,0 +1,471 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container Background */
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/backround_coffe_web.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header and Navigation Bar */
+header {
+    position: sticky; /* Makes the navbar sticky */
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo .title {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Pacifico', cursive;
+}
+
+.logo p {
+    color: #f0f0f0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Navigation Menu */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 25px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    color: #333;
+    background-color: chocolate;
+}
+
+/* Toggle Menu on Mobile */
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        width: 200px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in;
+    }
+
+    .menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .hamburger + .menu {
+        max-height: 500px; /* Arbitrary max-height */
+    }
+}
+
+/* Hero Section */
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 80px;
+    background: transparent;
+}
+
+.title-1 {
+    font-size: 48px;
+    color: #f0f0f0;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.title-1 span {
+    color: chocolate;
+}
+
+.home p {
+    color: honeydew;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.home-button button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    background-color: chocolate;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Product Menu Section */
+.menu-section {
+    padding: 60px 80px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    padding: 0 15px;
+    color: #666;
+}
+
+.card span {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: chocolate;
+    margin: 10px 15px 15px 15px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 80px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    font-size: 18px;
+    color: chocolate;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 60px 80px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* About Us Section */
+.about {
+    padding: 60px 80px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 80px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    background-color: chocolate;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    text-align: center;
+    color: #f0f0f0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-bar {
+        padding: 15px 40px;
+    }
+
+    .home {
+        padding: 0 40px;
+    }
+
+    .menu-section,
+    .testimonials,
+    .gallery,
+    .about,
+    .contact {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-bar {
+        padding: 15px 20px;
+    }
+
+    .home {
+        padding: 0 20px;
+    }
+
+    .home .title-1 {
+        font-size: 32px;
+    }
+
+    .home p {
+        font-size: 24px;
+    }
+
+    .menu-section h2,
+    .testimonials h2,
+    .gallery h2,
+    .about h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .product-cards,
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Accessibility Enhancements */
+/* Ensure sufficient color contrast */
+.menu li a {
+    color: white;
+}
+
+.menu li a:hover {
+    color: #333;
+    background-color: chocolate;
+}
+
+/* Focus States for Keyboard Navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px dashed chocolate;
+    outline-offset: 4px;
+}

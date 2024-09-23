@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raichaz Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Google Fonts for enhanced typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Container Wrapper -->
+    <div class="container">
+        <!-- Header Section with Navigation Bar -->
+        <header>
+            <nav class="nav-bar">
+                <div class="logo">
+                    <h1 class="title">Raichaz <span>Cafe</span></h1>
+                    <p>Brewed with Passion, Served with Love</p>
+                </div>
+                <!-- Hamburger Menu for Mobile -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- Navigation Links -->
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href= "menu.html">Menu</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="home">
+            <h1 class="title-1"><span>Brewed </span>With <span>Passion,</span></h1>
+            <p>Served with Love</p>
+            <div class="home-button">
+                <button onclick="window.location.href='menu.html'">Visit Menu</button>
+            </div>
+        </section>
+
+        <!-- Product Menu Section -->
+        <section id="menu-section" class="menu-section">
+            <h2>Our Specialty</h2>
+            <div class="product-cards">
+                <!-- Example Product Card -->
+                <div class="card">
+                    <img src="images/Espresso.jpg" alt="Espresso">
+                    <h3>Espresso</h3>
+                    <p>Rich and bold espresso made from the finest beans.</p>
+                    <span>$3.00</span>
+                </div>
+                <div class="card">
+                    <img src="images/cappuccino-.jpg" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p>Perfect blend of espresso, steamed milk, and foam.</p>
+                    <span>$4.50</span>
+                </div>
+                <div class="card">
+                    <img src="images/Latte.jpg" alt="Latte">
+                    <h3>Latte</h3>
+                    <p>Creamy latte with a touch of vanilla syrup.</p>
+                    <span>$4.00</span>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial">
+                    <img src="images/Emily.jpg" alt="Emily R.">
+                    <p>"Raichaz Cafe has the best coffee in town! The ambiance is perfect for relaxing."</p>
+                    <h4>Emily R.</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="images/john.jpg" alt="John D.">
+                    <p>"Amazing pastries and friendly staff. I love coming here every morning."</p>
+                    <h4>John D.</h4>
+                </div>
+                <div class="testimonial">
+                    <img src="images/shopia.jpg" alt="Sophia L.">
+                    <p>"A cozy place to work and enjoy a great cup of coffee. Highly recommend!"</p>
+                    <h4>Sophia L.</h4>
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/cafe_gallery1.jpg" alt="Cafe Interior">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cafe_gallery_2.jpg" alt="Cafe Exterior">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cafe_gallery_3.jpg" alt="Coffee Art">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cafe_gallery_4.jpg" alt="Pastries">
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Raichaz Cafe is a haven for coffee lovers, offering a variety of handcrafted beverages and freshly baked pastries. Our mission is to create a welcoming environment where everyone can enjoy quality coffee and great company.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to reach out? We'd love to hear from you!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Raichaz Cafe. All rights reserved.</p>
+        </footer>
+    </div> <!-- End of .container -->
+</body>
+</html>
